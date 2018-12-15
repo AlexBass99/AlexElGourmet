@@ -6,6 +6,8 @@
 #include <time.h>
 using namespace std;
 
+BITCH LASAGNA SUBSCRIBE 2 PEWDIEPIE
+	
 //Tamaño de la memoria
 const int KmemorySize = 2000;
 const int KprintColour = 10;
