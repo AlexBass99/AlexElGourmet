@@ -90,7 +90,7 @@ using namespace std;
 					salx = rand() % x;				//Determina cual coordenada X va a ser creando un número entre 0 y X-1
 					saly = rand() % y;				//Determina cual coordenada Y va a ser creando un número entre 0 e Y-1
 				
-				}while(( salx != 0) && (saly != 0));	//Así conseguimos que nunca pueda ser el (0,0)
+				}while(( salx == 0) && (saly == 0));	//Así conseguimos que nunca pueda ser el (0,0)
 
 								
 				maze [salx] [saly] = 'S';
@@ -201,7 +201,7 @@ using namespace std;
 
 		
 		cout << endl << "ELIGE TU DESTINO" << endl;
-		cout << "1. ENTRAR A MAZMORRIA" << endl;
+		cout << "1. ENTRAR A LA MAZMORRA" << endl;
 		cout << "2. HUIR A CASA" << endl;
 
 		cin >> menu;
