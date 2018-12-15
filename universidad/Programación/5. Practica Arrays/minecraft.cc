@@ -1,108 +1,173 @@
 #include <iostream>
 #include <cctype>
 #include <string.h>
+#include <stdlib.h>
+#include <windows.h>
+#include <time.h>
 using namespace std;
 
+//system("cls"); ESTO ES PARA HACER CLEAR DE LA PANTALLA
 
 
 
+//MODULO DE LA JUGABILIDAD----------------------------------------------------------------------------------------------
+	
+	//void jugada()
 
 
-//MODULO DE CONFIGURAR LA PARTIDA Y PREPARARLA--------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------------------------------
+
+//MODULO DE CONFIGURAR LA PARTIDA, PREPARARLA E INICIARLA--------------------------------------------------------------------------
+	
 	void config (){
+		
 		int x, y;
 		
-		cout << "¿Cómo de larga quieres que sea la mazmorra?" << endl;
+		cout << "¿Como de larga quieres que sea la mazmorra?" << endl;
 		cin >> x;
-		cout << endl << "¿Cómo de ancha quieres que sea?" << endl;
+		cout << endl << "¿Como de ancha quieres que sea?" << endl;
 		cin >> y;
 		cout << endl;
 
-
-		char maze[x] [y];
-
-			int i = 0;
-			int j = 0;
-
 		
-		//INICIALIZAR CON PUNTOS LA MAZMORRA------------------------------------------------------------------
+		//POSICIONAR LOS ELEMENTOS DE LA PARTIDA-----------------------------------------------------------------------	
 
-			for(i = 0; i < x; i++){
+			char maze[x] [y];
 
-				for(j = 0; j < y; j++){
+				int i;
+				int j;
+				
+			//BUCLES PARA DETERMINAR LA POSICION DEL JUGADOR, LAS SALAS VACIAS, LOS MONSTRUOS Y LOS TESOROS------------------------
+				
+				for(i = 0; i < x; i++){							
 
-				maze[i] [j] = '.';
+					for(j = 0; j < y; j++){
 
+						
+
+						if(i == 0 && j == 0){					//Posicionamos al Jugador en las coordenadas (0,0)
+
+							maze[i] [j] = 'J';				
+						}
+
+
+						else{
+
+							//Leyenda ----> 0, 1, 2, 3, 4 = Sala Vacia (.) | 5 = Monstruo (M) | 6 = Tesoro (T) | Jugador (J) | Salida (S) | 
+
+							int selector = rand() % 7;      						//Determina que tipo de elemento va a ser creando un número entre 0 y 6
+
+							
+							if(selector == 0 || selector == 1 || selector == 2 || selector == 3 || selector == 4){	//Convierte la coordenada en una sala vacia
+
+								maze[i] [j] = '.';
+
+							}
+
+							else if(selector == 5){									//Convierte la coordenada en un monstruo
+
+								maze [i] [j] = 'M';
+							}
+
+							else{													//Convierte la coordenada en un tesoro
+
+								maze [i] [j] = 'T';
+							}
+						}						
+					}
 				}
 
+			//-----------------------------------------------------------------------------------------------------
 
-			}
+
+			//DETERMINAR COORDENADAS DE LA SALIDA------------------------------------------------------------------
+
+				int salx;
+				int saly;
+
+				do{
+					
+					salx = rand() % x;				//Determina cual coordenada X va a ser creando un número entre 0 y X-1
+					saly = rand() % y;				//Determina cual coordenada Y va a ser creando un número entre 0 e Y-1
+				
+				}while(( salx != 0) && (saly != 0));	//Así conseguimos que nunca pueda ser el (0,0)
+
+								
+				maze [salx] [saly] = 'S';
+
+
+			//-------------------------------------------------------------------------------------------------------------------
+
+
+
 
 		//-----------------------------------------------------------------------------------------------------------
 
+		
+		
 		//SELECCIONAR SI SE QUIERE VER EL MAPA O NO------------------------------------------------------------------
 
 			char op;
 
-			cout << "¿Desea comprarle al extraño y siniestro anciano un mapa de MAZMORRIA? (s/n)" << endl;
+			cout << "¿Desea comprarle al extraño y siniestro anciano un mapa de la mazmorra? (s/n)" << endl;
 			cin >> op;
 
 			
-			if(op == 's'){
+			if(toupper(op) == 'S'){
 
 
-				cout << "¿QUÉ PASA HUMANO? ¿TIENES MIEDO A LO DESCONOCIDO?" << endl; 
+				cout << "¿QUE PASA HUMANO? ¿TIENES MIEDO A LO DESCONOCIDO?" << endl; 
 				cout << "(Mientras ignoras a la voz tenebrosa le compras al anciano el mapa)" << endl << endl;
 
 
-				//COUT DE LA MAZMORRA-----------------------------------------------------------------------------------------
-								
+				//COUT DE LOS BORDES DE LA MAZMORRA-----------------------------------------------------------------------------------------
+									
 
-				for(i = 0; i <= 2*y; i++){
+					for(i = 0; i <= 2*y; i++){
 
-					cout << "#";
-				}
+						cout << "#";
+					}
 
-				
-
-				cout << endl;
-
-				
-
-				for(i = 0; i < x; i++){
-
-					cout << "|";
-
-						for(j = 0; j < y; j++){
-
-						cout << maze[i] [j] << "|";
-
-						}
+					
 
 					cout << endl;
 
-				}
+					
+
+					for(i = 0; i < x; i++){
+
+						cout << "|";
+
+							for(j = 0; j < y; j++){
+
+								cout << maze[i] [j] << "|";
+
+							}
+
+						cout << endl;
+
+					}
 
 
-				
+					
 
-				for(i = 0; i <= 2*y; i++){
+					for(i = 0; i <= 2*y; i++){
 
-					cout << "#";
-				}
+						cout << "#";
+					}
 
 
-				cout << endl << endl;
+					cout << endl << endl;
 
-			//-----------------------------------------------------------------------------------------------------------
+				//-----------------------------------------------------------------------------------------------------------
 				
 
 			}
 
 			
-			else if(op == 'n'){
+			else if(toupper(op) == 'N'){
 
-				cout << "VEO QUE TE CREES VALIENTE, HUMANO, ESO ES, CAE EN LA DESESPERACIÓN SIN FORMA DE ORIENTARTE" << endl << endl;
+				cout << "VEO QUE TE CREES VALIENTE, HUMANO, ESO ES, CAE EN LA DESESPERACION SIN FORMA DE ORIENTARTE" << endl << endl;
 			}
 
 
@@ -118,7 +183,9 @@ using namespace std;
 
 		//-----------------------------------------------------------------------------------------------------------
 
-			
+
+		
+		
 	}
 
 //-----------------------------------------------------------------------------------------------------------
@@ -165,8 +232,10 @@ using namespace std;
 
 int main(){
 	
-	cout << endl << "BIENVENIDO A MAZMORRIA, DONDE LOS MÁS VALIENTES VIENEN A PROBAR SU ESPIRITU" << endl;
-	cout << endl << "¿QUÉ HARÁS? ¿HUIRÁS? ¿PEREZERÁS EN UNA OSCURA SALA? ¿O SALDRÁS VICTORIOSO?" << endl;
+	srand (time(NULL));
+	
+	cout << endl << "BIENVENIDO A LA MAZMORRA, DONDE LOS MAS VALIENTES VIENEN A PROBAR SU ESPIRITU" << endl;
+	cout << endl << "¿QUE HARAS? ¿HUIRAS? ¿PEREZERAS EN UNA OSCURA SALA? ¿O SALDRAS VICTORIOSO?" << endl;
 
 	menu();
 
