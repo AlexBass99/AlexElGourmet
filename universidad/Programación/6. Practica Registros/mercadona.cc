@@ -18,7 +18,7 @@ using namespace std;
     void alta(TProductos productos[], int &cont){
 
         cout << "Introduzca un nombre para el producto" << endl;
-        cin.getline(productos[cont].nombre);
+        cin.getline(productos[cont].nombre,100);
         
         cout << "Introduzca un precio para el producto" << endl;
         cin >> productos[cont].precio;

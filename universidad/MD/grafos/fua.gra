@@ -1,0 +1,16 @@
+nombreGrafo    a<dfa
+NoDirigido
+NoPonderado
+numVertices    3
+numParaNumerarLosVertices    4
+Vertice1  N 1  X 0  Y 0
+Vertice2  N 2  X 0  Y 0
+Vertice3  N 3  X 0  Y 0
+verticesConNombre    false
+verticesAleatorios    false
+vertsConCoordenadas    false
+numAristas    0
+MatrizDeAdyacencia
+0  0  0  
+0  0  0  
+0  0  0  

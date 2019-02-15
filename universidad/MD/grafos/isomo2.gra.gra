@@ -1,0 +1,24 @@
+nombreGrafo    isomo2
+NoDirigido
+NoPonderado
+numVertices    5
+numParaNumerarLosVertices    8
+a  N 1  X 134  Y 118
+b  N 2  X 466  Y 124
+c  N 3  X 302  Y 247
+Vertice6  N 6  X 149  Y 329
+Vertice7  N 7  X 472  Y 329
+verticesConNombre    true
+verticesAleatorios    false
+vertsConCoordenadas    true
+numAristas    4
+a  N 1  X 134  Y 118    b  N 2  X 466  Y 124    peso  MENOSUNO
+b  N 2  X 466  Y 124    c  N 3  X 302  Y 247    peso  MENOSUNO
+c  N 3  X 302  Y 247    Vertice6  N 6  X 149  Y 329    peso  MENOSUNO
+Vertice6  N 6  X 149  Y 329    Vertice7  N 7  X 472  Y 329    peso  MENOSUNO
+MatrizDeAdyacencia
+0  1  0  0  0  
+1  0  1  0  0  
+0  1  0  1  0  
+0  0  1  0  1  
+0  0  0  1  0  

@@ -1,0 +1,24 @@
+nombreGrafo    isomo1
+NoDirigido
+NoPonderado
+numVertices    5
+numParaNumerarLosVertices    6
+s  N 1  X 82  Y 95
+t  N 2  X 173  Y 233
+u  N 3  X 267  Y 348
+r  N 4  X 371  Y 244
+m  N 5  X 429  Y 93
+verticesConNombre    true
+verticesAleatorios    false
+vertsConCoordenadas    true
+numAristas    4
+s  N 1  X 82  Y 95    t  N 2  X 173  Y 233    peso  MENOSUNO
+u  N 3  X 267  Y 348    t  N 2  X 173  Y 233    peso  MENOSUNO
+u  N 3  X 267  Y 348    r  N 4  X 371  Y 244    peso  MENOSUNO
+r  N 4  X 371  Y 244    m  N 5  X 429  Y 93    peso  MENOSUNO
+MatrizDeAdyacencia
+0  0  0  0  0  
+0  0  0  0  0  
+0  0  0  0  0  
+0  0  0  0  0  
+0  0  0  0  0  

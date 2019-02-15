@@ -1,0 +1,30 @@
+nombreGrafo    pro1
+NoDirigido
+NoPonderado
+numVertices    6
+numParaNumerarLosVertices    9
+s  N 1  X 0  Y 0
+t  N 2  X 0  Y 0
+u  N 3  X 0  Y 0
+x  N 6  X 0  Y 0
+y  N 7  X 0  Y 0
+z  N 8  X 0  Y 0
+verticesConNombre    true
+verticesAleatorios    false
+vertsConCoordenadas    false
+numAristas    8
+s  N 1  X 0  Y 0    t  N 2  X 0  Y 0    peso  MENOSUNO
+u  N 3  X 0  Y 0    s  N 1  X 0  Y 0    peso  MENOSUNO
+t  N 2  X 0  Y 0    u  N 3  X 0  Y 0    peso  MENOSUNO
+x  N 6  X 0  Y 0    z  N 8  X 0  Y 0    peso  MENOSUNO
+z  N 8  X 0  Y 0    y  N 7  X 0  Y 0    peso  MENOSUNO
+x  N 6  X 0  Y 0    y  N 7  X 0  Y 0    peso  MENOSUNO
+x  N 6  X 0  Y 0    s  N 1  X 0  Y 0    peso  MENOSUNO
+z  N 8  X 0  Y 0    z  N 8  X 0  Y 0    peso  MENOSUNO
+MatrizDeAdyacencia
+0  0  0  0  0  0  
+0  0  0  0  0  0  
+0  0  0  0  0  0  
+0  0  0  0  0  0  
+0  0  0  0  0  0  
+0  0  0  0  0  0  

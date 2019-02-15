@@ -1,0 +1,24 @@
+nombreGrafo    Grafo1
+NoDirigido
+NoPonderado
+numVertices    4
+numParaNumerarLosVertices    5
+a  N 1  X 475  Y 173
+b  N 2  X 310  Y 8
+c  N 3  X 145  Y 173
+d  N 4  X 310  Y 338
+verticesConNombre    true
+verticesAleatorios    false
+vertsConCoordenadas    true
+numAristas    6
+a  N 1  X 475  Y 173    a  N 1  X 475  Y 173    peso  MENOSUNO
+a  N 1  X 475  Y 173    b  N 2  X 310  Y 8    peso  MENOSUNO
+a  N 1  X 475  Y 173    c  N 3  X 145  Y 173    peso  MENOSUNO
+b  N 2  X 310  Y 8    c  N 3  X 145  Y 173    peso  MENOSUNO
+b  N 2  X 310  Y 8    d  N 4  X 310  Y 338    peso  MENOSUNO
+c  N 3  X 145  Y 173    d  N 4  X 310  Y 338    peso  MENOSUNO
+MatrizDeAdyacencia
+0  0  0  0  
+0  0  0  0  
+0  0  0  0  
+0  0  0  0  

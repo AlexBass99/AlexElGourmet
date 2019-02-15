@@ -122,6 +122,7 @@ int main(){
 	char rae[n];
 	char cani[n];
 
+
 	frase(rae);
 	canificator(rae, cani, n);
 

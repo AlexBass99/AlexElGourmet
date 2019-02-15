@@ -1,0 +1,17 @@
+nombreGrafo    Grafo2-0
+NoDirigido
+NoPonderado
+numVertices    2
+numParaNumerarLosVertices    3
+f  N 1  X 475  Y 173
+g  N 2  X 145  Y 173
+verticesConNombre    true
+verticesAleatorios    true
+vertsConCoordenadas    true
+numAristas    3
+g  N 2  X 145  Y 173    f  N 1  X 475  Y 173    peso  MENOSUNO
+f  N 1  X 475  Y 173    f  N 1  X 475  Y 173    peso  MENOSUNO
+g  N 2  X 145  Y 173    g  N 2  X 145  Y 173    peso  MENOSUNO
+MatrizDeAdyacencia
+0  0  
+0  0  
